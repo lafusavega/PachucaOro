@@ -1,0 +1,48 @@
+.swiper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: rgb(249, 249, 249);
+   /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center; 
+}
+.cardview{
+  width: 100%;
+  height: 100%;
+  top: 0;
+  position: relative;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: 500;
+}
+.swiper-slide .descripcion{
+  background-color: rgb(5, 12, 98,.9);
+  color: white;
+  font-family: 'Mukta', sans-serif;
+  font-size: 11px;
+  position: relative;
+  z-index: 501;
+  top:85vh;
+  padding-bottom: 50px;
+}

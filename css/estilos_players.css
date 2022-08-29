@@ -1,0 +1,139 @@
+*{
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        text-decoration: none;
+        list-style: none;
+        box-sizing: border-box;
+        user-select: none;
+}
+body{
+        background-color: aliceblue;
+}
+.presentacion_jugadores img{
+        display: none;
+}
+.players_header{
+        width: 100%;
+        background: linear-gradient(rgba(0, 17, 255, 0.84), rgb(0, 17, 255,0.84)), url("../img/fondo ruido3.png");
+}
+.players_header .titulo_players{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background: -webkit-linear-gradient(rgb(27, 4, 172),rgb(255, 255, 255));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
+.opciones_categorias{
+        width: 100%;
+}
+.opciones_categorias ul{
+        display: flex;
+        justify-content: space-evenly;
+        
+}
+.opciones_categorias ul li{
+        margin: 5px;
+        padding: 15px;
+        background-color: rgb(13, 35, 240);
+        color: rgb(255, 255, 255);
+        transition: all 0.5s;
+        cursor:pointer
+        
+}
+.opciones_categorias ul li:hover{
+        background-color: black;
+        
+}
+.lista_jugadores_cuarta{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+}
+.seccion_posicion{
+        width: 100%;
+        border-top: solid 1px black;
+        margin-top: 10px;
+}
+.seccion_posicion h1{
+        margin-left: 15px;
+        background: -webkit-linear-gradient(rgb(27, 4, 172),rgb(168, 182, 174));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: -1rem -0.2rem 0.8rem ;
+}
+.card_jugador{
+        position: relative;
+        width: 180px;
+        height: 150px;
+        display: inline-block;
+        justify-content: flex-start;
+        align-items: center;
+        border-radius: 20px;
+        background-color: aqua;
+        margin: 5px;
+}
+.card_jugador::before{
+        content: '';
+        position: absolute;
+        bottom: -12%;
+        left: 2%;
+        width: 95%;
+        height: 90%;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: -1;
+        filter: blur(10px);
+}
+.card_jugador{
+        background: url("../img/fondo_campo.jpg");
+        background-size: cover;
+}
+.card_jugador:hover{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/fondo_campo.jpg");
+}
+
+.card_jugador img{
+        position: absolute;
+        bottom: 0;
+        left: 40%;
+        transform: translateX(-50%);
+        max-width: 90%;
+        height: 120px;
+        transition: 0.5s;
+}
+.card_jugador:hover img{
+        z-index: 0;
+        left: 81.5%;
+        height: 130px;
+        filter: drop-shadow(-20px -10px 5px rgba(8, 8, 8, 0.5));
+        display: none;
+}
+.card_jugador:hover .descripcion {
+        z-index: 10;
+}
+.card_jugador .descripcion {
+        position: relative;
+        width: 60%;
+        padding: 20px 20px 20px 20px;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s;
+}
+.card_jugador h1 {
+        font-size: 1rem;
+        text-transform: uppercase;
+        color: white;
+}
+.card_jugador:hover .descripcion {
+        left: 0%;
+        opacity: 1;
+        visibility: visible;
+}
+.card_jugador .descripcion h2 {
+        color: white;
+        font-size: 0.9em;
+        line-height: 1em;
+}

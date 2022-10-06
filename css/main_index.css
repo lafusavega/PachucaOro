@@ -3,55 +3,86 @@
         background-color: aliceblue;
         width: 100%;
 }
+.titulos{
+        background-color: #0f0c29;
+        text-align: center;
+}
+.titulos *{
+        color: white;
+        background-image: linear-gradient(rgb(198, 174, 14),blue);
+        font-family: 'Kanit';
+        font-size: 2rem;
+}
+/************************************Estilos uniformes *****************************/
 .uniformes_temporada{
         width: 100%;
         display: flex;
         flex-wrap: wrap;
         margin-top: 5px;
 }
+.presentacion_uniforme{
+        display: flex;
+        width: 100%;
+        background-color: rgb(233, 233, 233);
+        justify-content: center;
+}
+.presentacion_uniforme img{
+        width: 200px;
+}
+.uniformes{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+}
 .card_uniforme{
         width: 100%;
-        border: solid 1px rgba(20, 79, 241, 0.85);
-        height: 250px;
-        padding: 1px;
-}
-.local{
-        background: #0F2027;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #2C5364, #203A43, #182e37);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #97a5ac, #2C5364, #182e37); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */        
-        height: 40%;
         position: relative;
+}
+.color_uniforme{
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+        position: absolute;
+}
 
+
+.local{
+        background-color: red;
 }
 .away{
-        background: #0f0c29;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #020dae, #020dae, #efb12d);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #020dae, #020dae, #efb12d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
-        height: 40%;
+        background-color: aqua;
 }
 .alternative{
-        background: #0f0c29;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #020dae, #020dae, #efb12d);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #efb12d, #efb12d, #020dae); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
-        height: 40%;
+        background-color: purple;
 }
 .content_uniforme{
         display: flex;
-        height: 60%;
         position: relative;
+        flex-wrap: wrap;
+}
+.content_uniforme img{
+        width:18%;
+        display: flex;
+
 }
 .descripcion_uniforme{
-        font-family: 'Rowdies', cursive;
-        padding: 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 }
 .descripcion_uniforme h1{
         font-family: 'Kanit', sans-serif;
-        font-size: 20px;
+        font-size: 1rem;
 }
 .descripcion_uniforme p{
         font-family: 'Outfit', sans-serif;
+        font-size: 5px;
+        display: none;
 }
-
+.uniforme_visita, .uniforme_alternativo{
+        display: none;
+}
+/**********************************Estilos partidos *******************************/
 .jornada{
         font-family: 'Outfit', sans-serif;
         padding: 10px;
@@ -89,6 +120,8 @@
         align-items: center;
         justify-content: center;
 }
+
+
 .card_partido img{
         width: 150px;
 }
@@ -106,8 +139,53 @@
 .datos_partido a:hover{
         color: pink;
 }
-@media (min-width:1366px){
-        .card_uniforme{
-                max-width: 30%;
+@media (min-width:800px){
+        /******************************Estilos uniformes **********************/
+        .uniformes_temporada{
+                width: 100%;
+                display: flex;
+                height: 35vw;
+                overflow: hidden;
         }
+        .presentacion_uniforme{
+                width: 50%;
+                transition: all 1s;
+                display: flex;
+                justify-content: center;
+        }
+        .presentacion_uniforme img{
+                width: 250px;
+        }
+        .uniformes{
+                width: 50%;
+                display: flex;
+                flex-wrap: wrap;
+                height: auto;
+        }
+        .card_uniforme{
+                max-width: 100%;
+                cursor: pointer;
+                height: 33%;
+        }
+        .content_uniforme{
+                height: auto;
+        }
+        .content_uniforme img{
+                width: 100px;
+                transition: all 1s;
+        }
+       
+        /**************************Estilos partidos************************/
+        .jornada{
+                justify-content: space-evenly;
+        }
+        .lista_partidos{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+        }
+        .card_partido{
+                max-width: 33%;
+        }
+        
 }

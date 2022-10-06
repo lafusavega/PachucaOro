@@ -1,12 +1,22 @@
-addEventListener('DOMContentLoaded',()=>{
-        const slides = ['./img/partido_sub10.jpg','./img/partido_sub12.jpg','./img/partido_sub10.jpg']
+function jerseylocal(){
+        document.querySelector(".uniforme_visita").style.display = "none";
+        document.querySelector(".uniforme_alternativo").style.display = "none";
+        document.querySelector(".uniforme_local").style.display = "block";
+}
+function jerseyvisita(){
+        document.querySelector(".uniforme_visita").style.display = "flex";
+        document.querySelector(".uniforme_local").style.display = "none";
+        document.querySelector(".uniforme_alternativo").style.display = "none";
+}
+function jerseyalternativo(){
+        document.querySelector(".uniforme_visita").style.display = "none";
+        document.querySelector(".uniforme_alternativo").style.display = "flex";
+        document.querySelector(".uniforme_local").style.display = "none";
+}
+function jerseyroot(){
+        document.querySelector(".uniforme_visita").style.display = "none";
+        document.querySelector(".uniforme_alternativo").style.display = "none";
+        document.querySelector(".uniforme_local").style.display = "flex";
+}
 
-        let i = 1;
-        let porcentaje_base = 100/slides.length;
-        let porcentaje_actual = porcentaje_base;
-
-        for(let index = 0 ; index < slides.length; i++){
-                
-        }
-})
 

@@ -15,18 +15,10 @@
 </head>
 <body>
         
-    <header class="principal_header">
-        <div class="presentacion_club">
-            <div class="imagen_escudo">
-                <img src="./img/escudo_pachuca.png" alt="" class="logo">
-            </div>
-            <div class="nombreescuela">
-                <h1 class="nombre_escuela">P A C H U C A </h1>
-                <h1 class="nombre_escuela">O R O</h1>
-            </div>
-        </div>
-        <div class="follow">
-            <i class="fa fa-hand-o-down" aria-hidden="true"></i><h2>Siguenos</h2><i class="fa fa-hand-o-down" aria-hidden="true"></i>
+    <header class="header">
+        <div class="escudo_pachuca">
+            <img src="./img/escudo_pachuca.png" alt="Escudo Pachuca Oficial" class="logo">
+            <h1 class="nombre_escuela">P A C H U C A  ORO</h1>
         </div>
         <div class="nav">
             <div class="socialmedia">
@@ -98,18 +90,25 @@
         <div class="swiper-pagination"></div>
       </div>
       <div class="main">
+        <section class="titulos"><h1>Equipacion temporada 22-23</h1></section>
         <div class="uniformes_temporada">
-            <div class="card_uniforme">
+            <div class="presentacion_uniforme">
+                <img src="img/jugador_local.jpg" alt="" class="uniforme_local">
+                <img src="img/jugador_visita.jpg" alt="" class="uniforme_visita">
+                <img src="img/jersey_alternativo.jpg" alt="" class="uniforme_alternativo">
+            </div>
+          <div class="uniformes">
+            <div class="card_uniforme" onmouseover="jerseylocal()" onmouseout="jerseyroot()">
                 <div class="color_uniforme local"></div>
                 <div class="content_uniforme">
-                    <img src="img/jersey_pachucalocal.png" alt="">
+                    <img src="img/jersey_pachucalocal.png" alt="" class="ul">
                     <div class="descripcion_uniforme">
                         <h1>Jersey Local Temporada 2022-2023</h1>
                         <p>Acompañanos vistiendo este jersey en nuestra casa y con nuestra gente</p>
                     </div>
                 </div>
             </div>
-            <div class="card_uniforme">
+            <div class="card_uniforme uv" onmouseover="jerseyvisita()" onmouseout="jerseyroot()">
                 <div class="color_uniforme away"></div>
                 <div class="content_uniforme">
                     <img src="img/jersey_local.png" alt="">
@@ -119,7 +118,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card_uniforme">
+            <div class="card_uniforme" onmouseover="jerseyalternativo()" onmouseout="jerseyroot()">
                 <div class="color_uniforme alternative"></div>
                 <div class="content_uniforme">
                     <img src="img/jersey_local.png" alt="">
@@ -129,6 +128,7 @@
                     </div>
                 </div>
             </div>
+          </div>
         </div>
 
 
@@ -227,6 +227,7 @@
         </div>
       </div>
         <footer></footer>
+        <script src="js/carrusel.js"></script>
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script src="./js/index_dom.js" type="module"></script>
 </body>

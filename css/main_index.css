@@ -61,9 +61,8 @@
         flex-wrap: wrap;
 }
 .content_uniforme img{
-        width:18%;
+        width:25%;
         display: flex;
-
 }
 .descripcion_uniforme{
         display: flex;
